@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+   scuttlebot:
+      image: "scuttlebot"
+      build: .
+      ports:
+         - "8008:8008"
+      volumes:
+         - "../sbot-data:/root/.ssb/"
+      container_name: ssb-server
+      restart: always
